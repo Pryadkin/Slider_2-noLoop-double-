@@ -1,0 +1,58 @@
+* {
+  /* box-sizing: border-box; */
+}
+body {
+  font-size: 40px;
+  color: white;
+
+}
+.slider {
+  width: 605px;
+  height: 200px;
+  margin: auto;
+  border: 2px solid black;
+  overflow: hidden;
+
+}
+.slider_wrapper {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: all ease 0.5s;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.slider_item {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  width: 50%;    /* кол-во активных элементов в слайдере */
+  height: 50%;   /* для реклизации двойного слайдера */
+  background-color: grey;
+  justify-content: center;
+  align-items: center;
+}
+.slider_item:nth-child(4n+4) { /* каждый 4 элемент */
+  background-color: #cc7a00;
+}
+.slider_item:nth-child(4n+1) { /* каждый 5 элемент */
+  background-color: #cc7a00;
+}
+.showNone {
+  display: none;
+}
+.control_click{
+  text-decoration: none;
+}
+.control_click_right {
+  position: absolute;
+  top: 80px;
+  right: 500px;
+}
+.control_click_left {
+  position: absolute;
+  top: 80px;
+  left: 500px;
+}
